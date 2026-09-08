@@ -93,6 +93,7 @@
 
   section.block{padding:44px 0; border-top:1px solid var(--border-soft)}
   section.block:first-of-type{border-top:none}
+  section.block:last-of-type{padding-bottom:76px}
   h2.sec{font-size:clamp(24px,3.4vw,30px); letter-spacing:-.02em; font-weight:700; margin:0 0 6px}
   h3.sub{font-size:19px; font-weight:650; letter-spacing:-.01em; margin:30px 0 10px}
   h4.mini{font-size:16px; font-weight:650; margin:22px 0 6px}
@@ -128,13 +129,6 @@
   tbody tr:last-child td{border-bottom:none}
   td:first-child{font-weight:600; white-space:nowrap}
   @media (max-width:640px){ td:first-child{white-space:normal} }
-
-  .footer{
-    padding:40px 0 72px; border-top:1px solid var(--border-soft); margin-top:20px;
-    font-size:13.5px; color:var(--text-2);
-  }
-  .footer .src{margin-top:14px}
-  .footer .src a{font-weight:500}
 
   /* motion default state (progressive enhancement; visible if JS fails) */
   .reveal{opacity:1; transform:none}
@@ -184,7 +178,6 @@
       <li><a href="#s4"><span class="num">4</span>Публикация в газетах</a></li>
       <li><a href="#s5"><span class="num">5</span>Правовая база и ограничения</a></li>
       <li><a href="#s6"><span class="num">6</span>Карта рисков</a></li>
-      <li><a href="#s7"><span class="num">7</span>План мероприятий</a></li>
     </ol>
   </nav>
 
@@ -379,40 +372,6 @@
       </table>
     </div>
   </section>
-
-  <!-- 7 -->
-  <section class="block" id="s7">
-    <h2 class="sec reveal">7. План мероприятий</h2>
-    <div class="table-scroll reveal">
-      <table>
-        <thead><tr><th>Этап</th><th>Содержание</th><th>Срок</th></tr></thead>
-        <tbody>
-          <tr><td style="white-space:normal">1. Подбор представителя</td><td>Адвокат с профилем: исполнительное производство, недвижимость, право иностранцев. Проверка по реестру коллегии. Согласование фиксированной и результативной части вознаграждения.</td><td>1 неделя</td></tr>
-          <tr><td style="white-space:normal">2. Доверенность</td><td>Оформление у нотариуса в Турции либо в консульстве, с прямым перечислением полномочий по разделу 2.</td><td>1 неделя</td></tr>
-          <tr><td style="white-space:normal">3. Финансовый контур</td><td>Турецкий налоговый номер, счёт, резервирование средств: залоги по нескольким параллельным лотам замораживаются одновременно.</td><td>1–2 недели</td></tr>
-          <tr><td style="white-space:normal">4. Мониторинг</td><td>Портал UYAP: фильтры по провинции, району, типу и диапазону стоимости, избранное. Наборы: Стамбул (по районам), Невшехир (центр, Ургюп, Аванос), Анталья. Дублирующий контур — ilan.gov.tr, раздел İcra İlanları, с сохранением поисковых критериев, и мобильное приложение.</td><td>постоянно</td></tr>
-          <tr><td style="white-space:normal">5. Оценка лота</td><td>Выборка 10–15 сопоставимых объектов на sahibinden, корректировка на завышение, сверка с индексом.</td><td>1–2 дня на лот</td></tr>
-          <tr><td style="white-space:normal">6. Юридическая проверка</td><td>Полный объём по разделу 2. Выполняется внутри 7-дневного окна торгов.</td><td>3–5 дней</td></tr>
-          <tr><td style="white-space:normal">7. Регистрация полномочий</td><td>Обращение представителя в конкретное исполнительное управление до конца рабочего дня, предшествующего окончанию торгов.</td><td>по каждому лоту</td></tr>
-          <tr><td style="white-space:normal">8. Ставка и оплата</td><td>Залог до 23:30 предыдущего дня; остаток — в течение 7 дней с публикации протокола.</td><td>7 дней</td></tr>
-          <tr><td style="white-space:normal">9. Оформление</td><td>Уплата гербового сбора и НДС, получение документа о продаже, регистрация через WebTapu, при необходимости — выселение.</td><td>по факту</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="note reveal">Режим мониторинга: ежедневная проверка в утренние часы. Окно торгов составляет 7 дней, из которых 3–5 уходит на проверку объекта. Пропуск двух дней означает утрату возможности участия в лоте.</div>
-  </section>
-
-  <div class="footer">
-    <p>Документ подготовлен по состоянию на 8 сентября 2026 года и носит информационный характер. Пороговые суммы, перечни закрытых районов и требования к иностранным покупателям пересматриваются регулярно. Не является юридической консультацией: параметры конкретной сделки подлежат подтверждению турецким адвокатом до внесения залога.</p>
-    <p class="src">Официальные ресурсы:
-      <a href="https://esatis.uyap.gov.tr" target="_blank" rel="noopener">esatis.uyap.gov.tr</a> ·
-      <a href="https://www.ilan.gov.tr/" target="_blank" rel="noopener">ilan.gov.tr</a> ·
-      <a href="https://webtapu.tkgm.gov.tr" target="_blank" rel="noopener">webtapu.tkgm.gov.tr</a> ·
-      <a href="https://www.turkiye.gov.tr" target="_blank" rel="noopener">turkiye.gov.tr</a> ·
-      <a href="https://www.resmigazete.gov.tr" target="_blank" rel="noopener">resmigazete.gov.tr</a> ·
-      <a href="https://bik.gov.tr/" target="_blank" rel="noopener">bik.gov.tr</a>
-    </p>
-  </div>
 
 </div>
 
