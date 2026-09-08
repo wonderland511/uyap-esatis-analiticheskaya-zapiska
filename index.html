@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Покупка недвижимости в Турции через исполнительные торги · UYAP e-satış</title>
+<meta name="description" content="Аналитическая записка: платформа UYAP e-satış, роль адвоката, sahibinden, правовая база. Регионы: Стамбул, Каппадокия, Анталья.">
+<style>
+  :root{
+    --bg:#fbfbfd; --surface:#ffffff; --surface-2:#f5f5f7;
+    --text:#1d1d1f; --text-2:#6e6e73; --border:#d2d2d7; --border-soft:#e8e8ed;
+    --accent:#0071e3; --accent-ink:#ffffff;
+    --warn-bg:#fff4e5; --warn-border:#f0c88a; --warn-ink:#7a4b00;
+    --shadow:0 1px 3px rgba(0,0,0,.06),0 8px 30px rgba(0,0,0,.05);
+    --maxw:920px;
+  }
+  html[data-theme="dark"]{
+    --bg:#000000; --surface:#1c1c1e; --surface-2:#161618;
+    --text:#f5f5f7; --text-2:#98989d; --border:#38383a; --border-soft:#2a2a2c;
+    --accent:#0a84ff; --accent-ink:#ffffff;
+    --warn-bg:#2a1e05; --warn-border:#5c4415; --warn-ink:#f0c88a;
+    --shadow:0 1px 3px rgba(0,0,0,.5),0 8px 30px rgba(0,0,0,.4);
+  }
+  @media (prefers-color-scheme:dark){
+    html:not([data-theme="light"]){
+      --bg:#000000; --surface:#1c1c1e; --surface-2:#161618;
+      --text:#f5f5f7; --text-2:#98989d; --border:#38383a; --border-soft:#2a2a2c;
+      --accent:#0a84ff; --accent-ink:#ffffff;
+      --warn-bg:#2a1e05; --warn-border:#5c4415; --warn-ink:#f0c88a;
+      --shadow:0 1px 3px rgba(0,0,0,.5),0 8px 30px rgba(0,0,0,.4);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  img{max-width:100%}
+
+  /* top bar */
+  .topbar{
+    position:sticky; top:0; z-index:50;
+    backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px);
+    background:color-mix(in srgb,var(--bg) 82%,transparent);
+    border-bottom:1px solid var(--border-soft);
+  }
+  .topbar-inner{
+    max-width:var(--maxw); margin:0 auto; padding:12px 20px;
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .brand{font-size:15px; font-weight:600; letter-spacing:-.01em; color:var(--text)}
+  .brand span{color:var(--text-2); font-weight:400}
+  .theme-toggle{
+    appearance:none; border:1px solid var(--border); background:var(--surface);
+    color:var(--text); font:inherit; font-size:14px; font-weight:500;
+    padding:8px 14px; border-radius:980px; cursor:pointer; min-height:40px;
+    display:inline-flex; align-items:center; gap:8px; transition:transform .15s ease, background .2s ease;
+  }
+  .theme-toggle:active{transform:scale(.96)}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+
+  /* hero */
+  .hero{padding:72px 0 40px}
+  .hero h1{
+    font-size:clamp(32px,5.2vw,46px); line-height:1.1; letter-spacing:-.03em;
+    font-weight:700; margin:0 0 18px;
+  }
+  .hero p.lede{font-size:19px; color:var(--text-2); margin:0 0 8px; max-width:640px}
+  .hero .meta{font-size:14px; color:var(--text-2); margin-top:18px}
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:22px}
+  .chip{
+    font-size:13px; font-weight:500; padding:6px 12px; border-radius:980px;
+    background:var(--surface-2); border:1px solid var(--border-soft); color:var(--text-2);
+  }
+
+  /* table of contents */
+  .toc{
+    margin:32px 0 8px; padding:20px 22px; background:var(--surface); border:1px solid var(--border-soft);
+    border-radius:18px; box-shadow:var(--shadow);
+  }
+  .toc h2{font-size:13px; text-transform:uppercase; letter-spacing:.08em; color:var(--text-2); margin:0 0 12px; font-weight:600}
+  .toc ol{margin:0; padding:0; list-style:none; columns:2; column-gap:28px}
+  .toc li{margin:0 0 8px; break-inside:avoid}
+  .toc a{color:var(--text); font-size:15px}
+  .toc a:hover{color:var(--accent); text-decoration:none}
+  .toc .num{color:var(--text-2); font-variant-numeric:tabular-nums; margin-right:8px}
+
+  section.block{padding:44px 0; border-top:1px solid var(--border-soft)}
+  section.block:first-of-type{border-top:none}
+  h2.sec{font-size:clamp(24px,3.4vw,30px); letter-spacing:-.02em; font-weight:700; margin:0 0 6px}
+  h3.sub{font-size:19px; font-weight:650; letter-spacing:-.01em; margin:30px 0 10px}
+  h4.mini{font-size:16px; font-weight:650; margin:22px 0 6px}
+  p{margin:0 0 14px}
+  ul.list{margin:0 0 14px; padding-left:22px}
+  ul.list li{margin:0 0 8px}
+
+  .lead{font-size:18px; color:var(--text-2)}
+
+  .callout{
+    margin:20px 0; padding:16px 18px; border-radius:14px;
+    background:var(--warn-bg); border:1px solid var(--warn-border); color:var(--warn-ink);
+    font-size:15px;
+  }
+  .callout strong{color:var(--warn-ink)}
+  .note{
+    margin:18px 0; padding:14px 16px; border-left:3px solid var(--border);
+    background:var(--surface-2); border-radius:0 12px 12px 0; font-size:14.5px; color:var(--text-2);
+  }
+
+  .table-scroll{
+    overflow-x:auto; -webkit-overflow-scrolling:touch;
+    border:1px solid var(--border-soft); border-radius:16px; margin:18px 0; background:var(--surface);
+    box-shadow:var(--shadow);
+  }
+  table{border-collapse:collapse; width:100%; min-width:520px; font-size:15px}
+  caption{text-align:left; font-size:13px; color:var(--text-2); padding:12px 16px 0; font-weight:600}
+  th,td{text-align:left; padding:13px 16px; vertical-align:top; border-bottom:1px solid var(--border-soft)}
+  thead th{
+    font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--text-2);
+    background:var(--surface-2); font-weight:600; border-bottom:1px solid var(--border);
+  }
+  tbody tr:last-child td{border-bottom:none}
+  td:first-child{font-weight:600; white-space:nowrap}
+  @media (max-width:640px){ td:first-child{white-space:normal} }
+
+  .footer{
+    padding:40px 0 72px; border-top:1px solid var(--border-soft); margin-top:20px;
+    font-size:13.5px; color:var(--text-2);
+  }
+  .footer .src{margin-top:14px}
+  .footer .src a{font-weight:500}
+
+  /* motion default state (progressive enhancement; visible if JS fails) */
+  .reveal{opacity:1; transform:none}
+  html.js .reveal{opacity:0; transform:translateY(20px)}
+  @media (prefers-reduced-motion:reduce){
+    html.js .reveal{opacity:1; transform:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');
+  (function(){try{var t=localStorage.getItem('theme');if(t){document.documentElement.setAttribute('data-theme',t);}else{document.documentElement.removeAttribute('data-theme');}}catch(e){}})();
+</script>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">UYAP e-satış · <span>аналитическая записка</span></div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+      <span id="themeIcon">◐</span><span id="themeLabel">Тема</span>
+    </button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <h1 class="reveal">Покупка недвижимости в Турции через исполнительные торги</h1>
+    <p class="lede reveal">Аналитическая записка: платформа UYAP e-satış, роль адвоката, sahibinden, правовая база.</p>
+    <p class="lede reveal">Регионы: Стамбул, Каппадокия, Анталья.</p>
+    <p class="meta reveal">Дата подготовки: 8 сентября 2026 г.</p>
+    <div class="chips reveal">
+      <span class="chip">esatis.uyap.gov.tr</span>
+      <span class="chip">ilan.gov.tr</span>
+      <span class="chip">sahibinden.com</span>
+      <span class="chip">Закон № 7589 (31.07.2026)</span>
+    </div>
+  </div>
+
+  <nav class="toc reveal" aria-label="Содержание">
+    <h2>Содержание</h2>
+    <ol>
+      <li><a href="#rezume"><span class="num">—</span>Резюме</a></li>
+      <li><a href="#s1"><span class="num">1</span>Платформа UYAP e-satış</a></li>
+      <li><a href="#s2"><span class="num">2</span>Работа через адвоката</a></li>
+      <li><a href="#s3"><span class="num">3</span>Платформа sahibinden.com</a></li>
+      <li><a href="#s4"><span class="num">4</span>Публикация в газетах</a></li>
+      <li><a href="#s5"><span class="num">5</span>Правовая база и ограничения</a></li>
+      <li><a href="#s6"><span class="num">6</span>Карта рисков</a></li>
+      <li><a href="#s7"><span class="num">7</span>План мероприятий</a></li>
+    </ol>
+  </nav>
+
+  <!-- РЕЗЮМЕ -->
+  <section class="block" id="rezume">
+    <h2 class="sec reveal">Резюме</h2>
+    <p class="lead reveal">UYAP e-satış — государственная площадка принудительных продаж арестованного имущества. Объекты уходят ниже рынка, но доступ к площадке для нерезидента закрыт технически, а риски сосредоточены на этапе до подачи ставки.</p>
+    <h4 class="mini reveal">Ключевые выводы</h4>
+    <ul class="list reveal">
+      <li>Личный доступ к площадке возможен только при наличии турецкого ВНЖ. Без него работа ведётся исключительно через представителя по нотариальной доверенности.</li>
+      <li>Адвокат нужен в обоих сценариях. Не как способ входа в систему, а как исполнитель обязательной проверки обременений и допуска иностранца к торгам.</li>
+      <li><a href="https://www.sahibinden.com" target="_blank" rel="noopener">sahibinden.com</a> не является каналом мониторинга торгов. Его функция — определение рыночной цены для оценки выгодности лота.</li>
+      <li>С 31 июля 2026 г. введён административный штраф 5% от суммы ставки за неоплату выигранного лота, дополнительно к потере залога.</li>
+      <li>Отслеживание газет не требуется: весь объём объявлений дублируется на портале <a href="https://ilan.gov.tr" target="_blank" rel="noopener">ilan.gov.tr</a>, и при расхождении текстов приоритет у электронной версии.</li>
+    </ul>
+  </section>
+
+  <!-- 1 -->
+  <section class="block" id="s1">
+    <h2 class="sec reveal">1. Платформа UYAP e-satış</h2>
+    <p class="reveal">Электронная площадка Министерства юстиции (<a href="https://esatis.uyap.gov.tr" target="_blank" rel="noopener">esatis.uyap.gov.tr</a>), на которой исполнительные управления и отделы продаж мировых судов реализуют арестованное имущество. С 2 января 2023 года физические аукционные залы упразднены полностью: все торги проходят только в электронной форме.</p>
+
+    <h3 class="sub reveal">1.1. Условия доступа</h3>
+    <p class="reveal">Отдельной регистрации с логином и паролем не существует. Вход выполняется тремя способами: пароль <a href="https://www.turkiye.gov.tr" target="_blank" rel="noopener">e-Devlet</a>, мобильная подпись, электронная подпись. Все три привязаны к турецкому идентификатору личности.</p>
+    <div class="table-scroll reveal">
+      <table>
+        <thead><tr><th>Требование</th><th>Содержание</th></tr></thead>
+        <tbody>
+          <tr><td>Идентификатор</td><td>YKN (номер иностранца, начинается на 99). Выдаётся вместе с видом на жительство. Без ВНЖ доступ к e-Devlet не открывается.</td></tr>
+          <tr><td>Пароль e-Devlet</td><td>Выдаётся лично в отделении почты PTT при предъявлении карты ВНЖ и паспорта.</td></tr>
+          <tr><td>Банковский счёт</td><td>Только Vakıfbank, с подключённым интернет-банкингом. Иные банки площадка не принимает. Для открытия счёта требуется турецкий налоговый номер.</td></tr>
+          <tr><td>Допуск иностранца</td><td>Отдельное обращение в исполнительное управление, проводящее продажу, для проверки ограничений ст. 35 Закона о кадастре. Наличие личного аккаунта от этой процедуры не освобождает.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub reveal">1.2. Механика торгов</h3>
+    <div class="table-scroll reveal">
+      <table>
+        <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+        <tbody>
+          <tr><td>Залог (teminat)</td><td>10% от оценочной стоимости (muhammen bedel). Вносится до 23:30 дня, предшествующего окончанию торгов. По каждому лоту отдельно.</td></tr>
+          <tr><td>Альтернатива залогу</td><td>Безотзывная бессрочная банковская гарантия на те же 10%, передаётся в исполнительное управление до конца предыдущего рабочего дня.</td></tr>
+          <tr><td>Срок торгов</td><td>7 дней. При поступлении ставки в последние 10 минут срок однократно продлевается на 10 минут.</td></tr>
+          <tr><td>Публикация</td><td>Не позднее чем за 15 дней до начала торгов.</td></tr>
+          <tr><td>Минимальный шаг</td><td>Не менее 1/1000 оценочной стоимости и не менее 100 лир.</td></tr>
+          <tr><td>Порог продажи</td><td>Ставка должна превысить 50% оценочной стоимости либо сумму привилегированных требований (что больше), плюс расходы на реализацию.</td></tr>
+          <tr><td>Оплата остатка</td><td>7 дней с даты публикации протокола торгов на портале.</td></tr>
+          <tr><td>Передача права</td><td>После уплаты гербового сбора и НДС; оформление в кадастре через <a href="https://webtapu.tkgm.gov.tr" target="_blank" rel="noopener">WebTapu</a>, тип операции — принудительная продажа (cebri satış).</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="block" id="s2">
+    <h2 class="sec reveal">2. Работа через адвоката: есть ли смысл</h2>
+    <p class="lead reveal">Да. Адвокат закрывает две разные задачи, и вторая не отпадает даже при наличии собственного ВНЖ.</p>
+
+    <h4 class="mini reveal">Задача 1. Доступ к площадке без ВНЖ</h4>
+    <p class="reveal">Участие в торгах по нотариальной доверенности от имени другого лица прямо допускается законом, и представитель не обязан быть адвокатом. Однако закон требует, чтобы лицо, действующее через представителя, обратилось в проводящее продажу исполнительное управление не позднее конца рабочего дня, предшествующего окончанию торгов. Без этой регистрации система не позволит подать ставку от чужого имени.</p>
+    <div class="callout reveal"><strong>Экономический эффект:</strong> срок выхода на первую ставку сокращается с 2–4 месяцев (маршрут через получение ВНЖ) до 2–3 недель.</div>
+
+    <h4 class="mini reveal">Задача 2. Проверка объекта до подачи ставки</h4>
+    <p class="reveal">После завершения торгов отказаться от покупки нельзя: залог не возвращается, а с 31.07.2026 добавлен штраф. Вся проверка должна быть выполнена в течение 7-дневного окна торгов. Обязательный объём:</p>
+    <ul class="list reveal">
+      <li>Условия продажи (шартнаме) со всеми приложениями и выписка об обременениях.</li>
+      <li>Отчёт об оценке: вручался ли он должнику и не превышен ли двухлетний срок. Наиболее частое основание для отмены торгов.</li>
+      <li>Какие обременения при принудительной продаже погашаются, а какие переходят к покупателю. Автоматического очищения объекта не происходит.</li>
+      <li>Фактическое занятие объекта: жильцы, арендаторы, срок договора аренды.</li>
+      <li>Задолженность по взносам на содержание и налогу на недвижимость.</li>
+      <li>Соответствие ограничениям для иностранцев (раздел 5).</li>
+    </ul>
+
+    <h4 class="mini reveal">Требования к доверенности</h4>
+    <p class="reveal">Оформляется у турецкого нотариуса либо в консульстве Турции. Общей формулировки недостаточно: исполнительные управления требуют прямого перечисления полномочий. Обязательно включить: участие в торгах, в том числе электронных; внесение и возврат залогов; подачу ставок; оплату цены; получение документа о продаже от исполнительного управления; регистрацию в кадастре по типу операции cebri satış; выселение; ведение дела об отмене торгов.</p>
+    <div class="note reveal">Отдельный контрольный пункт: залог технически проходит через счёт представителя. Порядок перевода средств, возврата залога при проигрыше и ответственность за срыв срока оплаты должны быть зафиксированы в договоре письменно.</div>
+  </section>
+
+  <!-- 3 -->
+  <section class="block" id="s3">
+    <h2 class="sec reveal">3. Платформа sahibinden.com</h2>
+    <p class="reveal">Принципиальное разграничение: <a href="https://www.sahibinden.com" target="_blank" rel="noopener">sahibinden</a> — площадка частных объявлений о продаже по рыночным ценам. К исполнительным торгам отношения не имеет. Официальными каналами публикации торгов закон определяет портал UYAP, портал <a href="https://ilan.gov.tr" target="_blank" rel="noopener">ilan.gov.tr</a>, а также газеты и новостные сайты. sahibinden в этот перечень не входит.</p>
+    <div class="table-scroll reveal">
+      <table>
+        <thead><tr><th>Сильные стороны</th><th>Ограничения</th></tr></thead>
+        <tbody>
+          <tr><td style="white-space:normal">Крупнейшая база предложений по стране; позволяет собрать выборку сопоставимых объектов в конкретном махалле для расчёта рыночной цены.</td><td>Не содержит официальных лотов торгов. Встречающиеся объявления «icradan satılık» размещают посредники: с задержкой, неполно и с комиссией.</td></tr>
+          <tr><td style="white-space:normal">Даёт понимание ликвидности района: сколько объектов в экспозиции и как долго они висят.</td><td>Цены запрашиваемые, а не сделочные. Типичное завышение 10–20%, требуется корректировка.</td></tr>
+          <tr><td style="white-space:normal">Бесплатен, история объявлений доступна.</td><td>Часто блокирует доступ с зарубежных IP-адресов. Значительная доля объявлений-приманок от агентств по заниженной цене.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout reveal"><strong>Вывод:</strong> sahibinden включается в схему как инструмент оценки, а не мониторинга. Оценка судебного эксперта регулярно расходится с рынком в обе стороны. Рекомендуемая связка: <a href="https://esatis.uyap.gov.tr" target="_blank" rel="noopener">UYAP</a> и <a href="https://ilan.gov.tr" target="_blank" rel="noopener">ilan.gov.tr</a> — поиск лотов; <a href="https://www.sahibinden.com" target="_blank" rel="noopener">sahibinden</a> и <a href="https://www.endeksa.com" target="_blank" rel="noopener">endeksa</a> — проверка цены.</div>
+
+    <h3 class="sub reveal">3.1. Доступ и мобильные приложения</h3>
+    <p class="reveal">Веб-версия: <a href="https://www.sahibinden.com" target="_blank" rel="noopener">sahibinden.com</a>. Мобильные приложения (основное, все категории включая недвижимость):</p>
+    <div class="table-scroll reveal">
+      <table>
+        <thead><tr><th>Платформа</th><th>Ссылка</th></tr></thead>
+        <tbody>
+          <tr><td>iOS (App Store)</td><td><a href="https://apps.apple.com/us/app/sahibinden-alsatkiralakesfet/id418535251" target="_blank" rel="noopener">apps.apple.com/us/app/sahibinden-alsatkiralakesfet/id418535251</a></td></tr>
+          <tr><td>Android (Google Play)</td><td><a href="https://play.google.com/store/apps/details?id=com.sahibinden" target="_blank" rel="noopener">play.google.com/store/apps/details?id=com.sahibinden</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="reveal"><strong>Доступ с зарубежных IP-адресов ограничен.</strong> Сервис применяет географическую и антибот-фильтрацию: при заходе из-за пределов Турции страница часто не открывается, выдаёт проверку или обрывает сессию. Рабочее решение — подключение через VPN с турецким сервером. Ограничение распространяется и на веб-версию, и на мобильные приложения.</p>
+    <ul class="list reveal">
+      <li>Приложение может не отображаться в магазинах при региональной привязке аккаунта к другой стране. В этом случае используется прямая ссылка из таблицы выше либо смена региона учётной записи.</li>
+      <li>Локализация на английский частичная, значительная часть интерфейса остаётся на турецком. Для точной работы с фильтрами по районам целесообразно привлекать турецкоязычного сотрудника или представителя.</li>
+      <li>Рекомендуется завести аккаунт: он даёт сохранение поисковых критериев, избранное и отслеживание изменения цены по конкретным объявлениям.</li>
+    </ul>
+  </section>
+
+  <!-- 4 -->
+  <section class="block" id="s4">
+    <h2 class="sec reveal">4. Публикация в газетах: краткая справка</h2>
+    <p class="reveal">Фиксированного перечня изданий не существует. Публикацию организует Управление по делам печати (<a href="https://www.bik.gov.tr" target="_blank" rel="noopener">Basın İlan Kurumu</a>), уровень издания определяется оценочной стоимостью лота.</p>
+    <div class="table-scroll reveal">
+      <table>
+        <thead><tr><th>Категория лота</th><th>Где публикуется</th></tr></thead>
+        <tbody>
+          <tr><td>Нижняя группа</td><td>Решение о публикации в газете принимает исполнительное управление по своему усмотрению. На практике часто отказывают: суды признают охват электронного портала выше тиража любой газеты.</td></tr>
+          <tr><td>Средняя группа</td><td>Местная газета населённого пункта проведения продажи, имеющая право публиковать официальные объявления, либо новостной сайт.</td></tr>
+          <tr><td>Верхняя группа</td><td>Новостной сайт либо общенациональная газета с фактическим ежедневным тиражом свыше 50 000 экземпляров.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="reveal">Пороговые суммы между группами ежегодно индексируются Министерством юстиции по индексу цен производителей и публикуются в «<a href="https://www.resmigazete.gov.tr" target="_blank" rel="noopener">Ресми газете</a>», вступая в силу с 1 февраля. Базовые значения 2022 года: 500 000 и 2 000 000 лир; текущие значения существенно выше и требуют уточнения на дату сделки.</p>
+    <div class="callout reveal"><strong>Практический вывод:</strong> мониторинг газет нецелесообразен. Любое объявление одновременно и бесплатно публикуется на <a href="https://ilan.gov.tr" target="_blank" rel="noopener">ilan.gov.tr</a>. В газетном тексте приводится только выжимка без условий продажи. При расхождении текстов приоритет имеет версия на электронном портале, причём ошибки исправляются только там и без отдельного уведомления заинтересованных лиц.</div>
+  </section>
+
+  <!-- 5 -->
+  <section class="block" id="s5">
+    <h2 class="sec reveal">5. Правовая база и ограничения</h2>
+
+    <h3 class="sub reveal">5.1. Регулирование торгов</h3>
+    <div class="table-scroll reveal">
+      <table>
+        <thead><tr><th>Норма</th><th>Содержание</th></tr></thead>
+        <tbody>
+          <tr><td>Закон об исполнительном производстве, ст. 114</td><td>Базовая норма: порядок публикации, размер залога, пороги ставок, сроки оплаты.</td></tr>
+          <tr><td>Закон № 7343 (2021)</td><td>Отмена физических аукционов, переход на электронную форму. Полное внедрение по всей стране с 2 января 2023 года.</td></tr>
+          <tr><td>Закон № 7418 (2022)</td><td>Трёхуровневая система публикации в зависимости от стоимости лота; приравнивание новостных сайтов к газетам; обязательное бесплатное дублирование на ilan.gov.tr.</td></tr>
+          <tr><td>Закон № 7589, в силе с 31.07.2026</td><td>Два существенных изменения (см. ниже). К торгам, объявленным до этой даты, не применяется.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub reveal">5.2. Изменения 2026 года — требуют внимания</h3>
+    <ul class="list reveal">
+      <li><strong>Штраф за неоплату.</strong> При неуплате цены в срок залог не возвращается (как и раньше), и дополнительно назначается административный штраф в размере 5% от предложенной цены, взыскиваемый принудительно. При ставке 5 млн лир совокупные потери составляют 500 тыс. залога плюс 250 тыс. штрафа. Требование: полная сумма должна быть доступна до подачи ставки.</li>
+      <li><strong>Наследственные объекты.</strong> При разделе унаследованного имущества, где нет долей третьих лиц, первые торги проводятся только среди наследников-сособственников. Сторонние участники допускаются лишь ко вторым торгам.</li>
+    </ul>
+
+    <h3 class="sub reveal">5.3. Ограничения для иностранного покупателя</h3>
+    <div class="table-scroll reveal">
+      <table>
+        <thead><tr><th>Ограничение</th><th>Содержание</th></tr></thead>
+        <tbody>
+          <tr><td>Гражданство</td><td>Право приобретения предоставлено гражданам более чем 180 государств, для отдельных стран действуют запреты. Проверяется до сделки.</td></tr>
+          <tr><td>Площадь</td><td>Не более 30 гектаров на физическое лицо по стране; отдельно не более 10% площади соответствующего района.</td></tr>
+          <tr><td>Зоны</td><td>Запрет в военных запретных зонах и зонах особой безопасности. В 2026 году контроль по объектам вблизи военных зон в крупных городах ужесточён; риск — аннулирование права собственности.</td></tr>
+          <tr><td>Каппадокия</td><td>Значительная часть территории отнесена к зонам археологической и природной охраны, а также к особо охраняемой природной территории. Юридически чистый объект может оказаться неприменимым для планируемого использования.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub reveal">5.4. Вид на жительство через недвижимость</h3>
+    <p class="reveal">Приобретение недвижимости само по себе ВНЖ не требует. Обратная связь также ограничена двумя условиями:</p>
+    <ul class="list reveal">
+      <li><strong>Порог стоимости.</strong> С 16 октября 2023 года минимальная стоимость объекта в документе о собственности — 200 000 долларов США по курсу Центрального банка на дату оформления (ранее 75 000). Объект должен иметь статус жилья.</li>
+      <li><strong>Статус района.</strong> Закрыто для регистрации иностранцев 1169 махалле. В Анталье в перечень входят, в частности, Hurma, Sarısu, Liman в Коньяалты и Mahmutlar, Kestel, Kargıcak, Avsallar в Алании. В Стамбуле закрыто более 50 махалле. Покупка в закрытом махалле разрешена, получение ВНЖ на этот адрес — нет.</li>
+    </ul>
+    <div class="callout reveal"><strong>Конфликт целей:</strong> на торгах в документ о собственности вносится аукционная цена, которая по определению ниже рыночной. Приобретение по цели «дешевле рынка» и приобретение по цели «получить ВНЖ» практически несовместимы в одной сделке. Рекомендуется разделять: статусный объект приобретается на открытом рынке, инвестиционные — на торгах.</div>
+  </section>
+
+  <!-- 6 -->
+  <section class="block" id="s6">
+    <h2 class="sec reveal">6. Карта рисков</h2>
+    <div class="table-scroll reveal">
+      <table>
+        <thead><tr><th>Риск</th><th>Последствие</th><th>Управление</th></tr></thead>
+        <tbody>
+          <tr><td style="white-space:normal">Отмена торгов по иску должника или иных лиц</td><td>Регистрация права приостанавливается, средства заблокированы на неопределённый срок</td><td>Проверка соблюдения процедуры оценки и уведомлений до подачи ставки</td></tr>
+          <tr><td style="white-space:normal">Скрытые обременения</td><td>Переход обязательств к покупателю</td><td>Анализ шартнаме и свежей выписки об обременениях</td></tr>
+          <tr><td style="white-space:normal">Срыв срока оплаты</td><td>Потеря залога плюс штраф 5% от ставки</td><td>Резервирование полной суммы до подачи ставки</td></tr>
+          <tr><td style="white-space:normal">Занятость объекта</td><td>Необходимость процедуры принудительного выселения</td><td>Проверка фактического пользования до торгов</td></tr>
+          <tr><td style="white-space:normal">Несоответствие ст. 35 (иностранец)</td><td>Отказ в регистрации права после оплаты</td><td>Получение допуска в исполнительном управлении до торгов</td></tr>
+          <tr><td style="white-space:normal">Завышенная оценка эксперта</td><td>Покупка выше рынка при формально «выгодной» скидке</td><td>Сверка с рыночной выборкой (sahibinden, endeksa)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 7 -->
+  <section class="block" id="s7">
+    <h2 class="sec reveal">7. План мероприятий</h2>
+    <div class="table-scroll reveal">
+      <table>
+        <thead><tr><th>Этап</th><th>Содержание</th><th>Срок</th></tr></thead>
+        <tbody>
+          <tr><td style="white-space:normal">1. Подбор представителя</td><td>Адвокат с профилем: исполнительное производство, недвижимость, право иностранцев. Проверка по реестру коллегии. Согласование фиксированной и результативной части вознаграждения.</td><td>1 неделя</td></tr>
+          <tr><td style="white-space:normal">2. Доверенность</td><td>Оформление у нотариуса в Турции либо в консульстве, с прямым перечислением полномочий по разделу 2.</td><td>1 неделя</td></tr>
+          <tr><td style="white-space:normal">3. Финансовый контур</td><td>Турецкий налоговый номер, счёт, резервирование средств: залоги по нескольким параллельным лотам замораживаются одновременно.</td><td>1–2 недели</td></tr>
+          <tr><td style="white-space:normal">4. Мониторинг</td><td>Портал UYAP: фильтры по провинции, району, типу и диапазону стоимости, избранное. Наборы: Стамбул (по районам), Невшехир (центр, Ургюп, Аванос), Анталья. Дублирующий контур — ilan.gov.tr, раздел İcra İlanları, с сохранением поисковых критериев, и мобильное приложение.</td><td>постоянно</td></tr>
+          <tr><td style="white-space:normal">5. Оценка лота</td><td>Выборка 10–15 сопоставимых объектов на sahibinden, корректировка на завышение, сверка с индексом.</td><td>1–2 дня на лот</td></tr>
+          <tr><td style="white-space:normal">6. Юридическая проверка</td><td>Полный объём по разделу 2. Выполняется внутри 7-дневного окна торгов.</td><td>3–5 дней</td></tr>
+          <tr><td style="white-space:normal">7. Регистрация полномочий</td><td>Обращение представителя в конкретное исполнительное управление до конца рабочего дня, предшествующего окончанию торгов.</td><td>по каждому лоту</td></tr>
+          <tr><td style="white-space:normal">8. Ставка и оплата</td><td>Залог до 23:30 предыдущего дня; остаток — в течение 7 дней с публикации протокола.</td><td>7 дней</td></tr>
+          <tr><td style="white-space:normal">9. Оформление</td><td>Уплата гербового сбора и НДС, получение документа о продаже, регистрация через WebTapu, при необходимости — выселение.</td><td>по факту</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note reveal">Режим мониторинга: ежедневная проверка в утренние часы. Окно торгов составляет 7 дней, из которых 3–5 уходит на проверку объекта. Пропуск двух дней означает утрату возможности участия в лоте.</div>
+  </section>
+
+  <div class="footer">
+    <p>Документ подготовлен по состоянию на 8 сентября 2026 года и носит информационный характер. Пороговые суммы, перечни закрытых районов и требования к иностранным покупателям пересматриваются регулярно. Не является юридической консультацией: параметры конкретной сделки подлежат подтверждению турецким адвокатом до внесения залога.</p>
+    <p class="src">Официальные ресурсы:
+      <a href="https://esatis.uyap.gov.tr" target="_blank" rel="noopener">esatis.uyap.gov.tr</a> ·
+      <a href="https://ilan.gov.tr" target="_blank" rel="noopener">ilan.gov.tr</a> ·
+      <a href="https://webtapu.tkgm.gov.tr" target="_blank" rel="noopener">webtapu.tkgm.gov.tr</a> ·
+      <a href="https://www.turkiye.gov.tr" target="_blank" rel="noopener">turkiye.gov.tr</a> ·
+      <a href="https://www.resmigazete.gov.tr" target="_blank" rel="noopener">resmigazete.gov.tr</a> ·
+      <a href="https://www.bik.gov.tr" target="_blank" rel="noopener">bik.gov.tr</a>
+    </p>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var btn=document.getElementById('themeToggle');
+  var icon=document.getElementById('themeIcon');
+  var label=document.getElementById('themeLabel');
+  function current(){
+    var attr=root.getAttribute('data-theme');
+    if(attr) return attr;
+    return window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+  }
+  function sync(){
+    var t=current();
+    icon.textContent = t==='dark' ? '☾' : '☀';
+    label.textContent = t==='dark' ? 'Тёмная' : 'Светлая';
+  }
+  sync();
+  btn.addEventListener('click',function(){
+    var next = current()==='dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+    sync();
+  });
+  window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change',sync);
+})();
+</script>
+
+<script type="module">
+  const reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const els = document.querySelectorAll('.reveal');
+  if(reduce){
+    els.forEach(function(el){ el.style.opacity=1; el.style.transform='none'; });
+  } else {
+    try{
+      const { animate, inView, stagger } = await import("https://cdn.jsdelivr.net/npm/motion@11/+esm");
+      inView(".reveal", (el) => {
+        animate(el, { opacity:[0,1], y:[20,0] }, { duration:0.55, delay:0.02, easing:[0.16,1,0.3,1] });
+      }, { margin:"0px 0px -12% 0px" });
+      // safety: reveal anything still hidden after load (e.g. above fold)
+      setTimeout(function(){
+        document.querySelectorAll('.reveal').forEach(function(el){
+          if(getComputedStyle(el).opacity === '0'){
+            animate(el, { opacity:[0,1], y:[20,0] }, { duration:0.4 });
+          }
+        });
+      }, 1200);
+    }catch(e){
+      document.querySelectorAll('.reveal').forEach(function(el){ el.style.opacity=1; el.style.transform='none'; });
+    }
+  }
+</script>
+
+</body>
+</html>
